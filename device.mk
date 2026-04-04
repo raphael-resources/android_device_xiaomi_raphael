@@ -50,6 +50,10 @@ PRODUCT_PACKAGES += \
 # Init
 $(call soong_config_set,xiaomi_msmnile,variant_lib,//$(LOCAL_PATH):libvariant_xiaomi_raphael)
 
+# Maintainer Flag
+PRODUCT_SYSTEM_DEFAULT_PROPERTIES += \
+    ro.lunaris.maintainer=Chethan
+
 # Overlays
 PRODUCT_PACKAGES += \
     ApertureOverlayDevice \

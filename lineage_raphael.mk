@@ -14,6 +14,14 @@ $(call inherit-product, vendor/lineage/config/common_full_phone.mk)
 # Inherit from raphael device
 $(call inherit-product, device/xiaomi/raphael/device.mk)
 
+# LunarisAOSP Flags
+LUNARIS_BUILD_TYPE := OFFICIAL
+WITH_GMS := true
+TARGET_CUSTOM_UDFPS := true
+WITH_BCR := true
+SURFACE_FLINGER_BOOST := true
+
+# Device identifier. This must come after all inclusions.
 PRODUCT_NAME := lineage_raphael
 PRODUCT_DEVICE := raphael
 PRODUCT_MANUFACTURER := Xiaomi
