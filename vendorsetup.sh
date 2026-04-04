@@ -6,3 +6,4 @@ git clone https://github.com/raphael-resources/android_hardware_xiaomi.git hardw
 git clone https://github.com/raphael-resources/android_device_xiaomi_miuicamera.git device/xiaomi/miuicamera
 git clone https://github.com/raphael-resources/proprietary_vendor_xiaomi_miuicamera.git vendor/xiaomi/miuicamera
 git clone https://github.com/Lunaris-AOSP/vendor_lunaris-priv_keys.git vendor/lunaris-priv/keys
+git clone https://github.com/oscaro-resources/hardware_dolby.git hardware/dolby
