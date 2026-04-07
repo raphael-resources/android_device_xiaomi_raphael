@@ -14,6 +14,14 @@ $(call inherit-product, vendor/lineage/config/common_full_phone.mk)
 # Inherit from raphael device
 $(call inherit-product, device/xiaomi/raphael/device.mk)
 
+# Axion Flags
+TARGET_ENABLE_BLUR := true
+TARGET_INCLUDE_AXFX := true
+AXION_CAMERA_REAR_INFO := 48,13,8
+AXION_CAMERA_FRONT_INFO := 20
+AXION_MAINTAINER := LUFFY
+AXION_PROCESSOR := Snapdragon_855
+
 PRODUCT_NAME := lineage_raphael
 PRODUCT_DEVICE := raphael
 PRODUCT_MANUFACTURER := Xiaomi
