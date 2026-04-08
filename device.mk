@@ -57,6 +57,9 @@ $(call soong_config_set,xiaomi_msmnile,variant_lib,//$(LOCAL_PATH):libvariant_xi
 PRODUCT_SYSTEM_DEFAULT_PROPERTIES += \
     ro.lunaris.maintainer=Chethan
 
+# MiuiCamera
+$(call inherit-product, vendor/xiaomi/miuicamera/config.mk)
+
 # Overlays
 PRODUCT_PACKAGES += \
     ApertureOverlayDevice \
