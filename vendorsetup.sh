@@ -5,3 +5,4 @@ git clone https://github.com/raphael-resources/android_kernel_xiaomi_sm8150.git 
 git clone https://github.com/raphael-resources/android_hardware_xiaomi.git hardware/xiaomi
 git clone https://github.com/oscaro-resources/hardware_dolby.git hardware/dolby
 git clone https://github.com/raphael-resources/leica_camera.git vendor/xiaomi/miuicamera
+git clone https://github.com/AxionAOSP/android_packages_apps_ViPER4AndroidFX.git -b v4a packages/apps/ViPER4AndroidFX
