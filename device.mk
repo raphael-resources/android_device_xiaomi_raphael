@@ -77,5 +77,8 @@ PRODUCT_SHIPPING_API_LEVEL := 28
 PRODUCT_SOONG_NAMESPACES += \
     $(LOCAL_PATH)
 
+# ViPER4AndroidFX
+$(call inherit-product, packages/apps/ViPER4AndroidFX/config.mk)
+
 # Inherit from vendor blobs
 $(call inherit-product, vendor/xiaomi/raphael/raphael-vendor.mk)
