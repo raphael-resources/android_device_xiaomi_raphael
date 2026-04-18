@@ -33,8 +33,6 @@ TARGET_SCREEN_HEIGHT := 2340
 TARGET_SCREEN_WIDTH := 1080
 
 # Camera
-$(call inherit-product-if-exists, device/xiaomi/miuicamera/device.mk)
-
 PRODUCT_PACKAGES += \
     libMegviiFacepp-0.5.2 \
     libmegface \
@@ -54,7 +52,7 @@ $(call inherit-product, hardware/dolby/dolby.mk)
 $(call soong_config_set,xiaomi_msmnile,variant_lib,//$(LOCAL_PATH):libvariant_xiaomi_raphael)
 
 # MiuiCamera
-$(call inherit-product, vendor/xiaomi/miuicamera/config.mk)
+$(call inherit-product-if-exists, device/xiaomi/miuicamera/device.mk)
 
 # Overlays
 PRODUCT_PACKAGES += \
