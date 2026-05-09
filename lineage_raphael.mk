@@ -19,6 +19,7 @@ LUNARIS_BUILD_TYPE := OFFICIAL
 WITH_GMS := true
 TARGET_CUSTOM_UDFPS := true
 WITH_BCR := true
+TARGET_SUPPORTS_GOOGLE_TELEPHONY := false
 SURFACE_FLINGER_BOOST := true
 
 # Device identifier. This must come after all inclusions.
