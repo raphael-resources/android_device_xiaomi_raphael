@@ -33,6 +33,8 @@ TARGET_SCREEN_HEIGHT := 2340
 TARGET_SCREEN_WIDTH := 1080
 
 # Camera
+$(call inherit-product-if-exists, device/xiaomi/miuicamera/device.mk)
+
 PRODUCT_PACKAGES += \
     libMegviiFacepp-0.5.2 \
     libmegface \
@@ -56,7 +58,7 @@ PRODUCT_SYSTEM_DEFAULT_PROPERTIES += \
     ro.lunaris.maintainer=Chethan
 
 # MiuiCamera
-$(call inherit-product-if-exists, device/xiaomi/miuicamera/device.mk)
+$(call inherit-product, vendor/xiaomi/miuicamera/config.mk)
 
 # Overlays
 PRODUCT_PACKAGES += \
