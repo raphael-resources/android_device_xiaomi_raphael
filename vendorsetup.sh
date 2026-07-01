@@ -1,4 +1,4 @@
-git clone https://github.com/raphael-resources/android_device_xiaomi_sm8150-common.git device/xiaomi/sm8150-common
+git clone https://github.com/raphael-resources/android_device_xiaomi_sm8150-common.git -b 17.0 device/xiaomi/sm8150-common
 git clone https://github.com/raphael-resources/proprietary_vendor_xiaomi_raphael.git vendor/xiaomi/raphael
 git clone https://github.com/raphael-resources/proprietary_vendor_xiaomi_sm8150-common.git -b 17.0 vendor/xiaomi/sm8150-common
 git clone https://github.com/raphael-resources/android_kernel_xiaomi_sm8150.git -b 17.0 kernel/xiaomi/sm8150
