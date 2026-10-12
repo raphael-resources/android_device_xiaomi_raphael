@@ -94,3 +94,27 @@ PRODUCT_SOONG_NAMESPACES += \
 
 # Inherit from vendor blobs
 $(call inherit-product, vendor/xiaomi/raphael/raphael-vendor.mk)
+
+# Boot debugging: adb comes up without the authorization prompt (the screen
+# never gets past the logo), the kernel log goes into logcat and logs are
+# streamed to /metadata/raphael-debug. Always on for userdebug/eng, where adbd
+# also starts as root; force it on a user build with RAPHAEL_BOOT_DEBUG=true.
+ifneq ($(RAPHAEL_BOOT_DEBUG)$(filter userdebug eng,$(TARGET_BUILD_VARIANT)),)
+PRODUCT_PACKAGES += \
+    init.raphael.debug.rc \
+    raphael-debuglog.sh
+
+PRODUCT_PRODUCT_PROPERTIES += \
+    ro.adb.secure=0 \
+    persist.sys.usb.config=mtp,adb \
+    ro.logd.kernel=true \
+    persist.logd.size=16M \
+    persist.logd.logpersistd=logcatd \
+    persist.logd.logpersistd.buffer=all \
+    persist.logd.logpersistd.size=30
+
+ifneq ($(filter userdebug eng,$(TARGET_BUILD_VARIANT)),)
+PRODUCT_PRODUCT_PROPERTIES += \
+    service.adb.root=1
+endif
+endif

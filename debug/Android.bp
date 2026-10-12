@@ -1,0 +1,21 @@
+//
+// Copyright (C) 2026 Paranoid Android
+//
+// SPDX-License-Identifier: Apache-2.0
+//
+
+// Boot debugging: dumps logs to /metadata/raphael-debug, which survives a
+// hang and can be read from recovery.
+
+prebuilt_etc {
+    name: "init.raphael.debug.rc",
+    src: "init.raphael.debug.rc",
+    sub_dir: "init",
+    system_ext_specific: true,
+}
+
+sh_binary {
+    name: "raphael-debuglog.sh",
+    src: "raphael-debuglog.sh",
+    system_ext_specific: true,
+}
