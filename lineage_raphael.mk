@@ -21,6 +21,7 @@ TARGET_CUSTOM_UDFPS := true
 WITH_BCR := true
 TARGET_SUPPORTS_GOOGLE_TELEPHONY := false
 SURFACE_FLINGER_BOOST := true
+WITH_PIXEL_LAUNCHER := true
 
 # Device identifier. This must come after all inclusions.
 PRODUCT_NAME := lineage_raphael
