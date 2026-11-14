@@ -306,6 +306,80 @@
       ],
       "DefaultIndex": 0,
       "ResetOnInit": true
+    },
+    {
+      "Name": "ADPF_OTHER",
+      "Paths": [
+        "<AdpfConfig>:OTHER"
+      ],
+      "Values": [
+        "ADPF_DEFAULT"
+      ],
+      "DefaultIndex": 0,
+      "ResetOnInit": true,
+      "Type": "Event"
+    },
+    {
+      "Name": "ADPF_SURFACEFLINGER",
+      "Paths": [
+        "<AdpfConfig>:SURFACEFLINGER"
+      ],
+      "Values": [
+        "ADPF_SF",
+        "ADPF_DEFAULT"
+      ],
+      "DefaultIndex": 0,
+      "ResetOnInit": true,
+      "Type": "Event"
+    },
+    {
+      "Name": "ADPF_HWUI",
+      "Paths": [
+        "<AdpfConfig>:HWUI"
+      ],
+      "Values": [
+        "ADPF_DEFAULT"
+      ],
+      "DefaultIndex": 0,
+      "ResetOnInit": true,
+      "Type": "Event"
+    },
+    {
+      "Name": "ADPF_GAME",
+      "Paths": [
+        "<AdpfConfig>:GAME"
+      ],
+      "Values": [
+        "ADPF_DEFAULT",
+        "ADPF_GAME"
+      ],
+      "DefaultIndex": 0,
+      "ResetOnInit": true,
+      "Type": "Event"
+    },
+    {
+      "Name": "ADPF_APP",
+      "Paths": [
+        "<AdpfConfig>:APP"
+      ],
+      "Values": [
+        "ADPF_DEFAULT"
+      ],
+      "DefaultIndex": 0,
+      "ResetOnInit": true,
+      "Type": "Event"
+    },
+    {
+      "Name": "ADPF_SYSUI",
+      "Paths": [
+        "<AdpfConfig>:SYSUI"
+      ],
+      "Values": [
+        "ADPF_DEFAULT"
+      ],
+      "DefaultIndex": 0,
+      "ResetOnInit": true,
+      "Type": "Event"
     }
   ],
   "Actions": [
@@ -790,6 +864,36 @@
       "Value": "585000000"
     },
     {
+      "PowerHint": "EXPENSIVE_RENDERING",
+      "Node": "CPUBigClusterMinFreq",
+      "Duration": 0,
+      "Value": "1401600"
+    },
+    {
+      "PowerHint": "EXPENSIVE_RENDERING",
+      "Node": "CPUBigPlusClusterMinFreq",
+      "Duration": 0,
+      "Value": "1401600"
+    },
+    {
+      "PowerHint": "EXPENSIVE_RENDERING",
+      "Node": "LLCCBWMinFreq",
+      "Duration": 0,
+      "Value": "2597"
+    },
+    {
+      "PowerHint": "EXPENSIVE_RENDERING",
+      "Node": "CPUBWMinFreq",
+      "Duration": 0,
+      "Value": "9155"
+    },
+    {
+      "PowerHint": "EXPENSIVE_RENDERING",
+      "Node": "GPUBusMinFreq",
+      "Duration": 0,
+      "Value": "5931"
+    },
+    {
       "PowerHint": "ML_ACC",
       "Node": "PMQoSCpuDmaLatency",
       "Duration": 2000,
@@ -926,6 +1030,89 @@
       "Node": "DoubleTapToWake",
       "Duration": 0,
       "Value": "1"
+    },
+    {
+      "PowerHint": "GAME",
+      "Node": "ADPF_GAME",
+      "Duration": 0,
+      "Value": "ADPF_GAME"
+    }
+  ],
+  "AdpfConfig": [
+    {
+      "Name": "ADPF_DEFAULT",
+      "PID_On": true,
+      "PID_Po": 5.0,
+      "PID_Pu": 3.0,
+      "PID_I": 0.0,
+      "PID_I_Init": 0,
+      "PID_I_High": 0,
+      "PID_I_Low": 0,
+      "PID_Do": 0.0,
+      "PID_Du": 0.0,
+      "SamplingWindow_P": 1,
+      "SamplingWindow_I": 0,
+      "SamplingWindow_D": 1,
+      "UclampMin_On": true,
+      "UclampMin_Init": 100,
+      "UclampMin_LoadUp": 384,
+      "UclampMin_LoadReset": 100,
+      "UclampMin_High": 384,
+      "UclampMin_Low": 0,
+      "ReportingRateLimitNs": 8333333,
+      "TargetTimeFactor": 1.0,
+      "StaleTimeFactor": 5.0,
+      "GpuBoost": false
+    },
+    {
+      "Name": "ADPF_SF",
+      "PID_On": true,
+      "PID_Po": 5.0,
+      "PID_Pu": 3.0,
+      "PID_I": 0.0,
+      "PID_I_Init": 0,
+      "PID_I_High": 0,
+      "PID_I_Low": 0,
+      "PID_Do": 0.0,
+      "PID_Du": 0.0,
+      "SamplingWindow_P": 1,
+      "SamplingWindow_I": 0,
+      "SamplingWindow_D": 1,
+      "UclampMin_On": true,
+      "UclampMin_Init": 128,
+      "UclampMin_LoadUp": 384,
+      "UclampMin_LoadReset": 128,
+      "UclampMin_High": 384,
+      "UclampMin_Low": 0,
+      "ReportingRateLimitNs": 8333333,
+      "TargetTimeFactor": 1.0,
+      "StaleTimeFactor": 5.0,
+      "GpuBoost": false
+    },
+    {
+      "Name": "ADPF_GAME",
+      "PID_On": true,
+      "PID_Po": 5.0,
+      "PID_Pu": 2.0,
+      "PID_I": 0.0,
+      "PID_I_Init": 0,
+      "PID_I_High": 0,
+      "PID_I_Low": 0,
+      "PID_Do": 0.0,
+      "PID_Du": 0.0,
+      "SamplingWindow_P": 1,
+      "SamplingWindow_I": 0,
+      "SamplingWindow_D": 1,
+      "UclampMin_On": true,
+      "UclampMin_Init": 192,
+      "UclampMin_LoadUp": 512,
+      "UclampMin_LoadReset": 192,
+      "UclampMin_High": 512,
+      "UclampMin_Low": 0,
+      "ReportingRateLimitNs": 8333333,
+      "TargetTimeFactor": 1.0,
+      "StaleTimeFactor": 5.0,
+      "GpuBoost": false
     }
   ]
 }
