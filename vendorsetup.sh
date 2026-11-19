@@ -3,6 +3,7 @@ git clone https://github.com/raphael-resources/android_kernel_xiaomi_sm8150.git 
 git clone https://github.com/raphael-resources/android_hardware_xiaomi.git hardware/xiaomi
 git clone https://github.com/Lunaris-AOSP/vendor_lunaris-priv_keys.git vendor/lunaris-priv/keys
 git clone https://github.com/raphael-resources/device_xiaomi_miuicamera.git -b 16.2 device/xiaomi/miuicamera
+git clone https://github.com/AxionAOSP/android_packages_apps_ViPER4AndroidFX.git -b v4a packages/apps/ViPER4AndroidFX
 
 echo ""
 if [ -c /dev/tty ]; then
